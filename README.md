@@ -8,6 +8,16 @@ Run command in the console from the main project directory:
 
 > npm run dev
 
-### Open in the browser:
+RUn the command in the second instance of console:
+
+> npm run server
+
+It will expose http://localhost:5000 for the fake API
+
+### Open in the browser and play for a while:
 
 http://localhost:5173/
+
+### TODO:
+
+Refactor, extract etc...
