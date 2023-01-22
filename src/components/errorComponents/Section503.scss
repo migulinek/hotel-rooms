@@ -1,0 +1,18 @@
+@import '~bootstrap/scss/bootstrap';
+
+section.error {
+  width: auto;
+  margin: 40px auto;
+  .card {
+    font-size: 28px;
+    .card-header {
+      font-size: 2em;
+      font-weight: bold;
+      color: red;
+      span.normal {
+        font-weight: normal;
+        color: #333;
+      }
+    }
+  }
+}

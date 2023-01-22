@@ -1,15 +1,16 @@
 import apiUrl from './apiUrl';
 import { CheckedRoom } from '../models/Rooms';
 
-const fetchCheckedRoom = async (id: number): Promise<CheckedRoom> => {
-  const url: string = `${apiUrl}checkedRooms/${id}`;
-  const res: Response = await fetch(url);
-  if (!res.ok) {
-    throw new Error(`The url ${url} cannot response properly`);
-  } else if (res.ok) {
-    return await res.json();
+const fetchCheckedRoom = async (): Promise<Array<CheckedRoom> | null> => {
+  const checkedAllRoomsUrl = `${apiUrl}checkedRooms`;
+  const resAll: Response = await fetch(checkedAllRoomsUrl);
+  if (!resAll.ok) {
+    throw new Error(`The url ${checkedAllRoomsUrl} cannot response properly`);
+  } else if (resAll.ok) {
+    return await resAll.json();
   }
-  return { id: -1 };
+
+  return null;
 };
 
 export default fetchCheckedRoom;

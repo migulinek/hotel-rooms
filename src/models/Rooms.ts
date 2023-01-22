@@ -18,4 +18,15 @@ export interface Price {
   value: number;
   currencyCode: string;
 }
-export type AvailabilityStatus = 'onRequest' | 'available' | 'soldOut' | 'error';
+export type AvailabilityStatus =
+  | Availability.Available
+  | Availability.OnRequest
+  | Availability.SoldOut
+  | Availability.Error;
+
+export enum Availability {
+  OnRequest = 'onRequest',
+  Available = 'available',
+  SoldOut = 'soldOut',
+  Error = 'error'
+}

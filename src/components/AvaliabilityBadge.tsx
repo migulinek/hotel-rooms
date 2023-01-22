@@ -1,7 +1,7 @@
 import { Badge } from 'react-bootstrap';
 import { CheckedRoom, AvailabilityStatus } from '../models/Rooms';
 
-const AvaliabilityBadge = ({ id, availabilityStatus, price }: CheckedRoom) => {
+const AvaliabilityBadge = ({ id, availabilityStatus }: CheckedRoom) => {
   function status(availability: AvailabilityStatus): 'success' | 'danger' | 'info' | 'dark' {
     switch (availability) {
       case 'available':
@@ -19,7 +19,9 @@ const AvaliabilityBadge = ({ id, availabilityStatus, price }: CheckedRoom) => {
 
   return availabilityStatus ? (
     <>
-      <Badge bg={status(availabilityStatus)}>{availabilityStatus}</Badge>
+      <Badge key={id} bg={status(availabilityStatus)}>
+        {availabilityStatus}
+      </Badge>
     </>
   ) : null;
 };
