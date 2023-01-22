@@ -27,7 +27,7 @@ const RoomsList = () => {
           {sortedRoomsByPrice(rooms).length > 0 ? (
             sortedRoomsByPrice(rooms).map((room: Room) => (
               <div className="col-6 mb-5">
-                <CardRoom checkedRooms={checkedRooms} room={room} />
+                <CardRoom key={room.id} checkedRooms={checkedRooms} room={room} />
               </div>
             ))
           ) : (
