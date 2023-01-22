@@ -1,9 +1,9 @@
 import Card from 'react-bootstrap/esm/Card';
-import { CheckedRooms, Room } from '../models/Rooms';
-import { getCheckedRoomById } from '../models/roomUtils.ts/getCheckedRoomById';
-import OrderRoom from './OrderRoom';
-import RoomPrice from './RoomPrice';
-import ThumbnailRoom from './ThumbnailRoom';
+import { CheckedRooms, Room } from '../../models/Rooms';
+import { getCheckedRoomById } from '../../models/roomUtils.ts/getCheckedRoomById';
+import OrderRoom from '../OrderRoom';
+import RoomPrice from '../RoomPrice';
+import ThumbnailRoom from '../ThumbnailRoom';
 
 const CardBodyRoom = ({ checkedRooms, room }: CheckedRooms & { room: Room }) => {
   return (

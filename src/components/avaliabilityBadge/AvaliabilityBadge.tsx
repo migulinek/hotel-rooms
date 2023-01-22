@@ -1,5 +1,6 @@
 import { Badge } from 'react-bootstrap';
-import { CheckedRoom, AvailabilityStatus } from '../models/Rooms';
+import { AvailabilityStatus, CheckedRoom } from '../../models/Rooms';
+import './AvaliabilityBadge.scss';
 
 const AvaliabilityBadge = ({ id, availabilityStatus }: CheckedRoom) => {
   function status(availability: AvailabilityStatus): 'success' | 'danger' | 'info' | 'dark' {
@@ -19,7 +20,7 @@ const AvaliabilityBadge = ({ id, availabilityStatus }: CheckedRoom) => {
 
   return availabilityStatus ? (
     <>
-      <Badge key={id} bg={status(availabilityStatus)}>
+      <Badge id="custom-badge" key={id} bg={status(availabilityStatus)}>
         {availabilityStatus}
       </Badge>
     </>

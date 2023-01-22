@@ -1,3 +1,7 @@
+$badge-border-radius: 0;
+$custom-border-radius: 12px;
+$card-border-radius: $custom-border-radius;
+
 @import '~bootstrap/scss/bootstrap';
 *,
 *::before,
@@ -20,42 +24,4 @@
 }
 .btn-link:hover {
   color: rgba(0, 0, 0, 0.7);
-}
-.card-header {
-  padding: 30px 0 15px;
-}
-.card-body {
-  min-height: 200px;
-}
-.buy {
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  button {
-    margin-left: auto;
-  }
-}
-.price {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.building {
-  font-size: 150px;
-  line-height: 1em;
-  color: #aaa;
-  .avaliable {
-    color: #333;
-  }
-  .not-avaliable {
-    color: #ccc;
-  }
-}
-.badge {
-  position: absolute;
-  top: 0;
-  left: 0;
-  --bs-badge-border-radius: 0;
-  border-bottom-right-radius: 12px;
 }

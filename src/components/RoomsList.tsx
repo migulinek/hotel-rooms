@@ -1,12 +1,12 @@
 import { CheckedRoom, Room } from '../models/Rooms';
 import { useState } from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import useRooms from '../hooks/useRooms';
 import fetchCheckedRoom from '../services/fetchCheckedRoom';
 import Section503 from './errorComponents/Section503';
 import { sortedRoomsByPrice } from '../models/roomUtils.ts/sortedRoomsByPriceAsc';
-import CardHeaderRoom from './CardHeaderRoom';
-import CardBodyRoom from './CardBodyRoom';
+import CardRoom from './cardRoom/CardRoom';
+import './RoomList.scss';
 
 const RoomsList = () => {
   const [rooms] = useRooms();
@@ -27,10 +27,7 @@ const RoomsList = () => {
           {sortedRoomsByPrice(rooms).length > 0 ? (
             sortedRoomsByPrice(rooms).map((room: Room) => (
               <div className="col-6 mb-5">
-                <Card key={room.id}>
-                  <CardHeaderRoom checkedRooms={checkedRooms} id={room.id} name={room.name} />
-                  <CardBodyRoom checkedRooms={checkedRooms} room={room} />
-                </Card>
+                <CardRoom checkedRooms={checkedRooms} room={room} />
               </div>
             ))
           ) : (

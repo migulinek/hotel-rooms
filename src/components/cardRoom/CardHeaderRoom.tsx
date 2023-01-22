@@ -1,7 +1,7 @@
 import { Card } from 'react-bootstrap';
-import { CheckedRooms, Room } from '../models/Rooms';
-import { getCheckedRoomById } from '../models/roomUtils.ts/getCheckedRoomById';
-import AvaliabilityBadge from './AvaliabilityBadge';
+import { CheckedRooms } from '../../models/Rooms';
+import { getCheckedRoomById } from '../../models/roomUtils.ts/getCheckedRoomById';
+import AvaliabilityBadge from '../avaliabilityBadge/AvaliabilityBadge';
 
 const CardHeaderRoom = ({
   checkedRooms,

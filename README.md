@@ -8,7 +8,7 @@ Run command in the console from the main project directory:
 
 > npm run dev
 
-RUn the command in the second instance of console:
+Run the command in the second instance of console:
 
 > npm run server
 

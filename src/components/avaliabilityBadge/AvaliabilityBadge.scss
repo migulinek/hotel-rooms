@@ -1,0 +1,12 @@
+@import '../../scss/styles.scss';
+
+.badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  &#custom-badge {
+    border-bottom-right-radius: $custom-border-radius;
+    border-top-left-radius: $custom-border-radius;
+  }
+}
