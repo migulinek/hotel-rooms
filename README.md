@@ -8,11 +8,7 @@ Run command in the console from the main project directory:
 
 > npm run start
 
-It will expose http://localhost:5000 for the fake API and http://localhost:5173/ for client
-
-### Open in the browser and play for a while:
-
-http://localhost:5173/
+It will expose http://localhost:5000 for the fake API on the **server** and http://localhost:5173/ for the **browser**
 
 ### If you would like to see 503 page, please run client only
 
