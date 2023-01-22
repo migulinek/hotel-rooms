@@ -6,18 +6,18 @@ Run command in the console from the main project directory:
 
 > npm i
 
-> npm run dev
+> npm run start
 
-Run the command in the second instance of console:
-
-> npm run server
-
-It will expose http://localhost:5000 for the fake API
+It will expose http://localhost:5000 for the fake API and http://localhost:5173/ for client
 
 ### Open in the browser and play for a while:
 
 http://localhost:5173/
 
-### TODO:
+### If you would like to see 503 page, please run client only
 
-Refactor, extract etc...
+> npm run dev
+
+### You can also turn on the server later by
+
+> npm run server
